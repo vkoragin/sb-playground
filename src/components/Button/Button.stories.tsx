@@ -1,22 +1,23 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 
-// You can learn about this: https://storybook.js.org/docs/react/writing-stories/introduction
-
-export default { 
+const meta = { 
     title: 'Button',
     component: Button,
-} as ComponentMeta<typeof Button>;
+} satisfies Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+export default meta;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    label: "Primary"
-}
+type Story = StoryObj<typeof meta>;
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-    label: "Secondary"
-}
+export const Primary: Story = {
+    args: {
+        label: "Primary",
+    },
+};
+
+export const Secondary: Story = {
+    args: {
+        label: "Secondary"
+    },
+};

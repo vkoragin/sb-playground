@@ -1,0 +1,43 @@
+@use './colors' as *;
+
+// TODO - Перенести в глобальную область видимости. Миксин удалить
+/** Преобразует SCSS-переменные в CSS-переменные  */
+@mixin colors-to-css {
+  :root {
+    --DEFAULT_Primary_Color: #{$OFD_Primary_Color};
+    --DEFAULT_Primary_Middle: #{$OFD_Primary_Middle};
+
+    --OFD_Primary_Color: #{$OFD_Primary_Color};
+    --OFD_Primary_Middle: #{$OFD_Primary_Middle};
+
+    --EDO_Primary_Color: #{$EDO_Primary_Color};
+    --EDO_Primary_Middle: #{$EDO_Primary_Middle};
+
+    --GOSOTCHET_Primary_Color: #{$Gosotchet_Primary_Color};
+    --GOSOTCHET_Primary_Middle: #{$Gosotchet_Primary_Middle};
+
+    --TD_Primary_Color: #{$TD_Primary_Color};
+    --TD_Primary_Middle: #{$TD_Primary_Middle};
+
+    --MARKING_Primary_Color: #{$Marking_Primary_Color};
+    --MARKING_Primary_Middle: #{$Marking_Primary_Middle};
+
+    --CHECK-INDEX_Primary_Color: #{$CheckInd_Primary_Color};
+    --CHECK-INDEX_Primary_Middle: #{$CheckInd_Primary_Middle};
+
+    --BIG-DATA_Primary_Color: #{$BigData_Primary_Color};
+    --BIG-DATA_Primary_Middle: #{$BigData_Primary_Middle};
+
+    --ARENDA_Primary_Color: #{$Arenda_Primary_Color};
+    --ARENDA_Primary_Middle: #{$Arenda_Primary_Middle};
+
+    --INTEGRATIONS_Primary_Color: #{$Integrations_Primary_Color};
+    --INTEGRATIONS_Primary_Middle: #{$Integrations_Primary_Middle};
+
+    --ONEC_Primary_Color: #{$OneC_Primary_Color};
+    --ONEC_Primary_Middle: #{$OneC_Primary_Middle};
+
+    --MCHD_Primary_Color: #{$Mchd_Primary_Color};
+    --MCHD_Primary_Middle: #{$Mchd_Primary_Middle};
+  }
+}
