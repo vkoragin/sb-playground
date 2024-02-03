@@ -18,6 +18,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
+    'import/ignore': ['react-color'],
   },
   rules: {
     'no-unused-vars': 'off',

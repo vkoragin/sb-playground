@@ -5,6 +5,7 @@ import dts from 'rollup-plugin-dts';
 import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import svg from 'rollup-plugin-svg';
 
 export default [
   {
@@ -28,6 +29,7 @@ export default [
         plugins: [],
       }),
       peerDepsExternal(),
+      svg(),
     ],
   },
   {
