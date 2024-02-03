@@ -1,0 +1,177 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/colors.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+@import '../../styles/font-faces.scss';
+
+$leftimg-margin: 4rem;
+$font-family-input: $font-family-primary;
+$font-family-label: $font-family-primary;
+
+.storybook-input-div {
+  position: relative;
+}
+.storybook-input-div.error {
+  border: 0.1rem solid $Error_Color;
+}
+.storybook-input-label {
+  color: $Common_Color;
+  font-family: $font-family-label;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0.8rem;
+  padding-left: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+.storybook-input-label_gosotchet {
+  color: $Gosotchet_Primary_Color;
+}
+.storybook-input-img {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 1.6rem;
+}
+.storybook-input-img.left {
+  left: 1.6rem;
+}
+.storybook-input-img.right {
+  right: 1.6rem;
+}
+.storybook-input-main {
+  height: 4.8rem;
+  box-sizing: border-box;
+  width: 100%;
+  //top: 2.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: $font-family-input;
+  font-style: normal;
+  line-height: 2rem;
+  outline: none;
+  background: $Base_White;
+  border: 0.1rem solid $Base_Grey;
+  border-radius: 0.2rem;
+  //padding: 2.2rem 3rem 0.25rem;
+  padding: 2.2rem 3rem 0.25rem 1rem;
+  //margin: 2.2rem 1rem 0.25rem;
+  transition: 0.3s;
+  color: $Common_Color;
+}
+.storybook-input-main:not(:active):focus-visible {
+  outline: 0.3rem solid $Info_Color;
+}
+
+.storybook-input-main--leftimg-margin {
+  .storybook-input-label,
+  .storybook-input-main {
+    padding-left: $leftimg-margin;
+  }
+}
+.storybook-input-main::placeholder {
+  color: $Middle_Grey;
+  margin-left: $leftimg-margin;
+}
+
+.storybook-input-passopener-btn {
+  position: absolute;
+  top: 1.6rem;
+  right: 0.625rem;
+  cursor: pointer;
+  border: 0rem;
+  background-color: transparent;
+}
+
+.storybook-input-div--disabled .storybook-input-main {
+  border-color: $Light_Grey;
+  background: $Background_Grey;
+}
+.storybook-input-div--disabled .storybook-input-label {
+  color: $Middle_Grey;
+  line-height: $line-height-large-1;
+}
+
+.storybook-input-div--disabled-two-lines .storybook-input-label {
+  line-height: $line-height-medium-1;
+}
+
+.storybook-input-div--inactive .storybook-input-label {
+  line-height: $line-height-large-0;
+  font-size: $font-size-medium-1;
+}
+
+.storybook-input-div--disabled .storybook-input-main::placeholder {
+  color: $Common_Color; //$Light_Grey;
+}
+
+.storybook-input-hint-text.visible {
+  display: block;
+}
+.storybook-input-hint-text {
+  //display: none;
+  position: absolute;
+  padding-left: 1rem;
+  padding: 0.25rem 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+.storybook-input-hint-text.info {
+  color: $Info_Color;
+}
+.storybook-input-hint-text.success {
+  color: $Success_Color;
+}
+.storybook-input-hint-text.warning {
+  color: $Warning_Color;
+}
+.storybook-input-hint-text.error {
+  color: $Error_Color;
+}
+
+.storybook-input-main--product-ofd:not(:disabled):hover {
+  border-color: $OFD_Primary_Color;
+}
+.storybook-input-main--product-edo:not(:disabled):hover {
+  border-color: $EDO_Primary_Color;
+}
+.storybook-input-main--product-gosotchet:not(:disabled):hover {
+  border-color: $Gosotchet_Primary_Color;
+}
+.storybook-input-main--product-td:not(:disabled):hover {
+  border-color: $TD_Primary_Color;
+}
+.storybook-input-main--product-marking:not(:disabled):hover {
+  border-color: $Marking_Primary_Color;
+}
+.storybook-input-main--product-check-index:not(:disabled):hover {
+  border-color: $CheckInd_Primary_Color;
+}
+.storybook-input-main--product-big-data:not(:disabled):hover {
+  border-color: $BigData_Primary_Color;
+}
+.storybook-input-main--product-arenda:not(:disabled):hover {
+  border-color: $Arenda_Primary_Color;
+}
+.storybook-input-main--product-integrations:not(:disabled):hover {
+  border-color: $Integrations_Primary_Color;
+}
+.storybook-input-main--product-onec:not(:disabled):hover {
+  border-color: $OneC_Primary_Color;
+}
+.storybook-input-main--product-mchd:not(:disabled):hover {
+  border-color: $Mchd_Primary_Color;
+}
+
+.storybook-input-main--theme-info {
+  border-color: $Info_Color;
+}
+.storybook-input-main--theme-success {
+  border-color: $Success_Color;
+}
+.storybook-input-main--theme-warning {
+  border-color: $Warning_Color;
+}
+.storybook-input-main--theme-error {
+  border-color: $Error_Color;
+}

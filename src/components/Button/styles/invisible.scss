@@ -1,0 +1,250 @@
+@use '../../../styles/colors.scss' as *;
+
+/* Стиль кнопки invisible */
+
+.storybook-button--invisible {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: transparent;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.storybook-button--invisible:active {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.2rem;
+}
+
+.storybook-button--invisible .storybook-button--progress {
+  background-color: $OFD_Primary_Pale;
+}
+
+/* Тема кнопки ofd */
+
+.storybook-button--invisible.ofd {
+  color: $OFD_Primary_Color;
+}
+
+.storybook-button--invisible.ofd:hover {
+  color: $OFD_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $OFD_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.ofd:focus-visible {
+  color: $OFD_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $OFD_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.ofd:active {
+  color: $OFD_Primary_Color;
+  svg {
+    transition: 0.3s;
+    stroke: $OFD_Primary_Color;
+  }
+}
+
+/* Тема кнопки td */
+
+.storybook-button--invisible.td {
+  color: $TD_Primary_Color;
+}
+
+.storybook-button--invisible.td:hover {
+  color: $TD_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $TD_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.td:focus-visible {
+  color: $TD_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $TD_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.td:active {
+  color: $TD_Primary_Color;
+  svg {
+    transition: 0.3s;
+    stroke: $TD_Primary_Color;
+  }
+}
+
+/* Тема кнопки edo */
+
+.storybook-button--invisible.edo {
+  color: $EDO_Primary_Color;
+}
+
+.storybook-button--invisible.edo:hover {
+  color: $EDO_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $EDO_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.edo:focus-visible {
+  color: $EDO_Primary_Middle;
+  svg {
+    transition: 0.3s;
+    stroke: $EDO_Primary_Middle;
+  }
+}
+
+.storybook-button--invisible.edo:active {
+  color: $EDO_Primary_Color;
+  svg {
+    transition: 0.3s;
+    stroke: $EDO_Primary_Color;
+  }
+}
+
+/* Тема кнопки gosotchet */
+
+.storybook-button--invisible.gosotchet {
+  color: $Gosotchet_Primary_Color;
+}
+
+.storybook-button--invisible.gosotchet:hover {
+  color: $Gosotchet_Primary_Middle;
+}
+
+.storybook-button--invisible.gosotchet:hover {
+  color: $Gosotchet_Primary_Middle;
+}
+
+.storybook-button--invisible.gosotchet:active {
+  color: $Gosotchet_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Gosotchet_Primary_Color;
+  }
+}
+
+/* Тема кнопки arenda */
+
+.storybook-button--invisible.arenda {
+  color: $Arenda_Primary_Color;
+}
+
+.storybook-button--invisible.arenda:hover {
+  color: $Arenda_Primary_Middle;
+}
+
+.storybook-button--invisible.arenda:active {
+  color: $Arenda_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Arenda_Primary_Color;
+  }
+}
+
+/* Тема кнопки marking */
+
+.storybook-button--invisible.marking {
+  color: $Marking_Primary_Color;
+}
+
+.storybook-button--invisible.marking:hover {
+  color: $Marking_Primary_Middle;
+}
+
+.storybook-button--invisible.marking:active {
+  color: $Marking_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Marking_Primary_Color;
+  }
+}
+
+/* Тема кнопки big-data */
+
+.storybook-button--invisible.big-data {
+  color: $BigData_Primary_Color;
+}
+
+.storybook-button--invisible.big-data:hover {
+  color: $BigData_Primary_Middle;
+}
+
+.storybook-button--invisible.big-data:active {
+  color: $BigData_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $BigData_Primary_Color;
+  }
+}
+
+/* Тема кнопки check-index */
+
+.storybook-button--invisible.check-index {
+  color: $CheckInd_Primary_Color;
+}
+
+.storybook-button--invisible.check-index:hover {
+  color: $Info_Middle;
+}
+
+.storybook-button--invisible.check-index:active {
+  color: $CheckInd_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $CheckInd_Primary_Color;
+  }
+}
+
+/* Тема кнопки МЧД */
+
+.storybook-button--invisible.mchd {
+  color: $Mchd_Primary_Color;
+}
+
+.storybook-button--invisible.mchd:hover {
+  color: $Mchd_Primary_Middle;
+}
+
+.storybook-button--invisible.mchd:active {
+  color: $Mchd_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Mchd_Primary_Color;
+  }
+}
+
+/* Тема кнопки success */
+
+.storybook-button--invisible.success {
+  color: $Success_Color;
+}
+
+.storybook-button--invisible.success:hover {
+  color: $Success_Middle;
+}
+
+.storybook-button--invisible.success:active {
+  color: $Success_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Success_Color;
+  }
+}

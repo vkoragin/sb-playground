@@ -1,0 +1,308 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/colors.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8rem;
+  color: $Dark_Grey;
+  background-color: $Light_Grey;
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.4rem 0 $shadow-color-3;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    border: solid transparent;
+    position: absolute;
+  }
+
+  &.top {
+    left: 50%;
+    bottom: calc(100% + 1rem);
+    transform: translateX(-50%);
+
+    &::before {
+      border-top-color: $Light_Grey;
+      top: 100%;
+      right: calc(50% - 1rem);
+      border-width: 1rem;
+      margin-left: -0.1rem;
+    }
+  }
+
+  &.bottom {
+    left: 50%;
+    top: calc(100% + 1rem);
+    transform: translateX(-50%);
+
+    &::before {
+      border-bottom-color: $Light_Grey;
+      bottom: 100%;
+      left: 50%;
+      border-width: 1rem;
+      margin-left: -1rem;
+    }
+  }
+
+  &.right {
+    top: 50%;
+    left: calc(100% + 1rem);
+    transform: translateY(-50%);
+
+    &::before {
+      border-right-color: $Light_Grey;
+      right: calc(100% - 0.1rem);
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 1rem;
+    }
+  }
+
+  &.left {
+    top: 50%;
+    right: calc(100% + 1rem);
+    transform: translateY(-50%);
+
+    &::before {
+      border-left-color: $Light_Grey;
+      left: calc(100% - 0.1rem);
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 1rem;
+    }
+  }
+
+  &.ofd {
+    background-color: $OFD_Primary_Light;
+
+    &.top::before {
+      border-top-color: $OFD_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $OFD_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $OFD_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $OFD_Primary_Light;
+    }
+  }
+
+  &.edo {
+    background-color: $EDO_Primary_Light;
+
+    &.top::before {
+      border-top-color: $EDO_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $EDO_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $EDO_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $EDO_Primary_Light;
+    }
+  }
+
+  &.gosotchet {
+    background-color: $Gosotchet_Primary_Light;
+
+    &.top::before {
+      border-top-color: $Gosotchet_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $Gosotchet_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $Gosotchet_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $Gosotchet_Primary_Light;
+    }
+  }
+
+  &.td {
+    background-color: $TD_Primary_Light;
+
+    &.top::before {
+      border-top-color: $TD_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $TD_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $TD_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $TD_Primary_Light;
+    }
+  }
+
+  &.marking {
+    background-color: $Marking_Primary_Light;
+
+    &.top::before {
+      border-top-color: $Marking_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $Marking_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $Marking_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $Marking_Primary_Light;
+    }
+  }
+
+  &.check-index {
+    background-color: $CheckInd_Primary_Light;
+
+    &.top::before {
+      border-top-color: $CheckInd_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $CheckInd_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $CheckInd_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $CheckInd_Primary_Light;
+    }
+  }
+
+  &.big-data {
+    background-color: $BigData_Primary_Light;
+
+    &.top::before {
+      border-top-color: $BigData_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $BigData_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $BigData_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $BigData_Primary_Light;
+    }
+  }
+
+  &.arenda {
+    background-color: $Arenda_Primary_Light;
+
+    &.top::before {
+      border-top-color: $Arenda_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $Arenda_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $Arenda_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $Arenda_Primary_Light;
+    }
+  }
+
+  &.integrations {
+    background-color: $Integrations_Primary_Light;
+
+    &.top::before {
+      border-top-color: $Integrations_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $Integrations_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $Integrations_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $Integrations_Primary_Light;
+    }
+  }
+
+  &.onec {
+    background-color: $OneC_Primary_Light;
+
+    &.top::before {
+      border-top-color: $OneC_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $OneC_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $OneC_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $OneC_Primary_Light;
+    }
+  }
+
+  &.mchd {
+    background-color: $Mchd_Primary_Light;
+
+    &.top::before {
+      border-top-color: $Mchd_Primary_Light;
+    }
+
+    &.bottom::before {
+      border-bottom-color: $Mchd_Primary_Light;
+    }
+
+    &.right::before {
+      border-right-color: $Mchd_Primary_Light;
+    }
+
+    &.left::before {
+      border-left-color: $Mchd_Primary_Light;
+    }
+  }
+}
+
+.text {
+  width: max-content;
+  text-align: center;
+  max-width: 100%;
+  font-size: $font-size-small;
+  font-family: $font-family-secondary;
+  font-weight: 600;
+}

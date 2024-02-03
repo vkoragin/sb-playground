@@ -1,0 +1,491 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/colors.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.datepicker {
+  position: relative;
+
+  &__customHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 0 2.2rem;
+    border-bottom: 0.1rem solid $Light_Grey;
+
+    &Left,
+    &Right {
+      width: 2rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: 0.3rem solid $color-blue-15;
+        box-shadow: $shadow-inset-1;
+        border-radius: 0.2rem;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &Right {
+      margin: 0 0 0 1.6rem;
+      transform: rotate(180deg);
+    }
+
+    &Left {
+      margin: 0 1.6rem 0 0;
+    }
+
+    &Center {
+      display: flex;
+    }
+
+    &Month,
+    &Year {
+      width: 11.2rem;
+      font-family: $font-family-primary;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-align: center;
+      padding: 1.4rem 0;
+      margin: 0 0.8rem;
+      background: $color-white-1;
+      border: 0.1rem solid $Light_Grey;
+      box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+      border-radius: $border-radius-1;
+
+      cursor: pointer;
+
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: 0.3rem solid $color-blue-15;
+        box-shadow: $shadow-inset-1;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+
+  .react-datepicker {
+    border: 0.1rem solid $color-blue-12;
+    border-radius: $border-radius-1;
+
+    &__header {
+      background-color: $color-white-1;
+      border: none;
+    }
+
+    &-popper {
+      z-index: 100;
+    }
+
+    &__year-wrapper {
+      max-width: 100%;
+      min-width: 36rem;
+      justify-content: flex-start;
+    }
+
+    &__year {
+      margin: 0 2.4rem 2.4rem 2.4rem;
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-align: center;
+
+      &-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.6rem;
+        height: 4.8rem;
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-align: center;
+        color: $color-blue-4;
+
+        &--today {
+          font-weight: 600;
+
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            outline: 0.3rem solid $color-blue-15;
+            box-shadow: $shadow-inset-1;
+            border-radius: 0.2rem;
+          }
+        }
+
+        &--selected {
+          color: $color-white-1;
+        }
+
+        &--keyboard-selected {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &__month-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__month {
+      margin: 0 1.3rem 2.1rem 1.3rem;
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-align: center;
+      color: $color-blue-4;
+
+      &-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 11.2rem;
+        height: 4.8rem;
+        text-transform: capitalize;
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          outline: 0.3rem solid $color-blue-15;
+          box-shadow: $shadow-inset-1;
+          border-radius: 0.2rem;
+        }
+
+        &--keyboard-selected {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &__current-month {
+      display: none;
+    }
+
+    &__week {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4.8rem;
+      height: 4.8rem;
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-align: center;
+
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: 0.3rem solid $color-blue-15;
+        box-shadow: $shadow-inset-1;
+        border-radius: 0.2rem;
+      }
+
+      &-names {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.6rem 1.6rem 0.4rem;
+      }
+
+      &-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        font-family: $font-family-primary;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $color-blue-4;
+        text-transform: uppercase;
+      }
+
+      &--outside-month {
+        background: $color-grey-1;
+        color: $color-grey-4;
+      }
+    }
+
+    &__navigation-icon::before {
+      top: 1.2rem;
+    }
+
+    &__today-button {
+      margin: 0 2.4rem 2rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 9rem;
+      height: 3.2rem;
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $color-white-1;
+      border: 0.1rem solid #2c70af;
+      box-shadow:
+        0 0.2rem 0.4rem rgba(52, 123, 126, 0.15),
+        inset 0 0.1rem 0.2rem rgba(255, 255, 255, 0.4);
+      border-radius: $border-radius-1;
+    }
+  }
+
+  .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::before {
+    border-bottom-color: $color-blue-12;
+  }
+
+  .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle::after {
+    border-bottom-color: $color-white-1;
+  }
+}
+
+.datepicker[class~='ofd'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $OFD_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $OFD_Primary_Color;
+    &:hover {
+      background-color: $OFD_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='td'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $TD_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $TD_Primary_Color;
+    &:hover {
+      background-color: $TD_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='gosotchet'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $Gosotchet_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $Gosotchet_Primary_Color;
+    &:hover {
+      background-color: $Gosotchet_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='edo'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $EDO_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $EDO_Primary_Color;
+    &:hover {
+      background-color: $EDO_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='arenda'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $Arenda_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $Arenda_Primary_Color;
+    &:hover {
+      background-color: $Arenda_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='marking'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $Marking_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $Marking_Primary_Color;
+    &:hover {
+      background-color: $Marking_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='check-index'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $CheckInd_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $CheckInd_Primary_Color;
+    &:hover {
+      background-color: $CheckInd_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='big-data'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $BigData_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $BigData_Primary_Color;
+    &:hover {
+      background-color: $BigData_Primary_Dark;
+    }
+  }
+}
+
+.datepicker[class~='mchd'] {
+  .datepicker__customHeader {
+    &Month,
+    &Year {
+      color: $Mchd_Primary_Color;
+    }
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__today-button,
+  .react-datepicker__year-text--selected,
+  .react-datepicker__month-text--keyboard-selected {
+    background-color: $Mchd_Primary_Color;
+    &:hover {
+      background-color: $Mchd_Primary_Dark;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .datepicker {
+    &__customHeader {
+      padding: 1.4rem 0 2rem;
+
+      &Month,
+      &Year {
+        width: 8rem;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 1rem 0;
+        margin: 0 0.8rem;
+      }
+    }
+    .react-datepicker {
+      &__day {
+        width: 3.5rem;
+        height: 2.5rem;
+        font-size: 1.3rem;
+
+        &-name {
+          width: 2.5rem;
+          height: 2.5rem;
+          font-size: 1.3rem;
+        }
+      }
+
+      &__month-text {
+        width: 9rem;
+        height: 4rem;
+      }
+
+      &__year-text {
+        width: 5rem;
+        height: 4.5rem;
+        font-size: 1.4rem;
+      }
+
+      &__year-wrapper {
+        min-width: 25rem;
+        justify-content: space-between;
+      }
+    }
+  }
+}

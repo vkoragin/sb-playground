@@ -1,0 +1,23 @@
+import innValidator from './innValidator';
+import ogrnValidator from './ogrnValidator';
+import kppValidator from './kppValidator';
+import snilsValidator from './snilsValidator';
+import vehicleNumberValidator from './vehicleNumberValidator';
+import phoneValidator from './phoneValidator';
+import emailValidator from './emailValidator';
+import passportCodeValidator from './passportCodeValidator';
+import passportValidator from './passportValidator';
+import guidValidator from './guidValidator';
+
+export const validateInnPerson = (inn: string) => innValidator(inn, 'person');
+export const validateInnOrganisation = (inn: string) => innValidator(inn, 'organisation');
+export const validatePassport = (passport: string) => passportValidator(passport);
+export const validatePassportCode = (code: string) => passportCodeValidator(code);
+export const validateOgrn = (ogrn: string) => ogrnValidator(ogrn, 'organisation');
+export const validateOgrnIp = (ogrn: string) => ogrnValidator(ogrn, 'person');
+export const validateKpp = (kpp: string | number) => kppValidator(kpp);
+export const validateSnils = (snils: string) => snilsValidator(snils);
+export const validateVehicleNumber = (vehicleNumber: string) => vehicleNumberValidator(vehicleNumber);
+export const validateEmail = (email: string) => emailValidator(email);
+export const validatePhone = (phone: string) => phoneValidator(phone);
+export const validateGuid = (guid: string) => guidValidator(guid);

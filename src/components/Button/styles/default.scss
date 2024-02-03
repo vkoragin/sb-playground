@@ -1,0 +1,380 @@
+@use '../../../styles/colors.scss' as *;
+
+/* Стиль кнопки default */
+
+.storybook-button--default {
+  background-color: $Base_White;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+  border-color: $Base_Grey;
+}
+
+.storybook-button--default:active {
+  box-shadow: inset 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+  border-color: $Gosotchet_Primary_Pale;
+}
+
+.storybook-button--default .storybook-button--progress {
+  background-color: $OFD_Primary_Pale;
+}
+
+/* Тема кнопки ofd */
+
+.storybook-button--default.ofd {
+  color: $OFD_Primary_Color;
+  &:focus-visible {
+    color: $OFD_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $OFD_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.ofd:hover {
+  color: $OFD_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $OFD_Primary_Middle;
+  }
+}
+
+.storybook-button--default.ofd:active {
+  background: $OFD_Primary_Light;
+  color: $OFD_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $OFD_Primary_Color;
+  }
+}
+
+/* Тема кнопки td */
+
+.storybook-button--default.td {
+  color: $TD_Primary_Color;
+  &:focus-visible {
+    color: $TD_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $TD_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.td:hover {
+  color: $TD_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $TD_Primary_Middle;
+  }
+}
+
+.storybook-button--default.td:active {
+  background: $TD_Primary_Light;
+  color: $TD_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $TD_Primary_Color;
+  }
+}
+
+/* Тема кнопки edo */
+
+.storybook-button--default.edo {
+  color: $EDO_Primary_Color;
+  &:focus-visible {
+    color: $EDO_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $EDO_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.edo:hover {
+  color: $EDO_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $EDO_Primary_Middle;
+  }
+}
+
+.storybook-button--default.edo:active {
+  background: $EDO_Primary_Light;
+  color: $EDO_Primary_Color;
+
+  svg {
+    transition: 0.3s;
+    stroke: $EDO_Primary_Color;
+  }
+}
+
+/* Тема кнопки gosotchet */
+
+.storybook-button--default.gosotchet {
+  color: $Gosotchet_Primary_Color;
+  &:focus-visible {
+    color: $Gosotchet_Primary_Middle;
+    svg {
+      transition: 0.3s;
+      stroke: $Gosotchet_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.gosotchet:hover {
+  color: $Gosotchet_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Gosotchet_Primary_Middle;
+  }
+}
+
+.storybook-button--default.gosotchet:active {
+  color: $Gosotchet_Primary_Color;
+  background: $Gosotchet_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Gosotchet_Primary_Color;
+  }
+}
+
+/* Тема кнопки arenda */
+
+.storybook-button--default.arenda {
+  color: $Arenda_Primary_Color;
+  &:focus-visible {
+    color: $Arenda_Primary_Middle;
+    svg {
+      transition: 0.3s;
+      stroke: $Arenda_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.arenda:hover {
+  color: $Arenda_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Arenda_Primary_Middle;
+  }
+}
+
+.storybook-button--default.arenda:active {
+  color: $Arenda_Primary_Color;
+  background: $Arenda_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Arenda_Primary_Color;
+  }
+}
+
+/* Тема кнопки marking */
+
+.storybook-button--default.marking {
+  color: $Marking_Primary_Color;
+
+  &:focus-visible {
+    color: $Marking_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $Marking_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.marking:hover {
+  color: $Marking_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Marking_Primary_Middle;
+  }
+}
+
+.storybook-button--default.marking:active {
+  color: $Marking_Primary_Color;
+  background: $Marking_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Marking_Primary_Color;
+  }
+}
+
+/* Тема кнопки big-data */
+
+.storybook-button--default.big-data {
+  color: $BigData_Primary_Color;
+  &:focus-visible {
+    color: $BigData_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $BigData_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.big-data:hover {
+  color: $BigData_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $BigData_Primary_Middle;
+  }
+}
+
+.storybook-button--default.big-data:active {
+  color: $BigData_Primary_Color;
+  background: $BigData_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $BigData_Primary_Color;
+  }
+}
+
+/* Тема кнопки check-index */
+
+.storybook-button--default.check-index {
+  color: $CheckInd_Primary_Color;
+  &:focus-visible {
+    color: $CheckInd_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $CheckInd_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.check-index:hover {
+  color: $Info_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $CheckInd_Primary_Middle;
+  }
+}
+
+.storybook-button--default.check-index:active {
+  color: $Info_Color;
+  background: $CheckInd_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $CheckInd_Primary_Color;
+  }
+}
+
+/* Тема кнопки МЧД */
+
+.storybook-button--default.mchd {
+  color: $Mchd_Primary_Color;
+  &:focus-visible {
+    color: $Mchd_Primary_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $Mchd_Primary_Middle;
+    }
+  }
+}
+
+.storybook-button--default.mchd:hover {
+  color: $Mchd_Primary_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Mchd_Primary_Middle;
+  }
+}
+
+.storybook-button--default.mchd:active {
+  color: $Mchd_Primary_Color;
+  background: $Mchd_Primary_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Mchd_Primary_Color;
+  }
+}
+
+/* Тема кнопки success */
+
+.storybook-button--default.success {
+  color: $Success_Color;
+  &:focus-visible {
+    color: $Success_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $Success_Middle;
+    }
+  }
+}
+
+.storybook-button--default.success:hover {
+  color: $Success_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Success_Middle;
+  }
+}
+
+.storybook-button--default.success:active {
+  color: $Success_Color;
+  background: $Success_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Success_Color;
+  }
+}
+
+/* Тема кнопки error */
+
+.storybook-button--default.error {
+  color: $Error_Color;
+  &:focus-visible {
+    color: $Error_Middle;
+
+    svg {
+      transition: 0.3s;
+      stroke: $Error_Middle;
+    }
+  }
+}
+
+.storybook-button--default.error:hover {
+  color: $Error_Middle;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Error_Middle;
+  }
+}
+
+.storybook-button--default.error:active {
+  color: $Error_Color;
+  background: $Error_Light;
+
+  svg {
+    transition: 0.3s;
+    stroke: $Error_Color;
+  }
+}

@@ -1,0 +1,89 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/colors.scss' as *;
+@use '../../styles/fonts.scss' as *;
+@import '../../styles/font-faces.scss';
+
+@mixin description-text {
+  font-family: $font-family-primary;
+  font-size: $font-size-small;
+  font-style: normal;
+  line-height: 1.4rem;
+  padding: 0.4rem 1.6rem;
+}
+
+.disabled {
+  opacity: 0.3;
+
+  button,
+  .fileButtonText {
+    cursor: auto;
+  }
+}
+
+.description {
+  @include description-text;
+  color: $Secondary_Grey;
+}
+
+.warning {
+  @include description-text;
+  color: $Warning_Color;
+}
+
+.error {
+  @include description-text;
+  color: $Error_Color;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0 0 0;
+}
+
+.fileName {
+  display: flex;
+  align-items: center;
+}
+
+.fileIcon {
+  width: 1.2rem;
+}
+
+.fileText {
+  color: $Common_Color;
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-medium-1;
+  margin: 0 0 0 1rem;
+}
+
+.fileButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.fileButtonIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  transform: rotate(45deg);
+
+  svg {
+    display: block;
+  }
+}
+
+.fileButtonText {
+  color: $Error_Color;
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-small;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+}

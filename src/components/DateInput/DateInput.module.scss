@@ -1,0 +1,553 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/colors.scss' as *;
+@use '../../styles/fonts.scss' as *;
+
+.dateInput {
+  .left {
+    svg {
+      path {
+        &:nth-child(1) {
+          transition: 0.3s;
+          stroke: $Middle_Grey;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          transition: 0.3s;
+          fill: $Middle_Grey;
+        }
+      }
+    }
+  }
+
+  &:focus:not(.disabled),
+  &:focus-within:not(.disabled) {
+    outline: none;
+
+    .inputs {
+      outline: 0.3rem solid $color-blue-15;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+  }
+
+  &.warning {
+    .title {
+      font-size: $font-size-medium-1;
+    }
+
+    .inputs {
+      outline: 0.1rem solid $color-warning-warning;
+    }
+  }
+
+  &.error {
+    .title {
+      font-size: $font-size-medium-1;
+    }
+
+    .inputs {
+      outline: 0.1rem solid $color-red-1;
+    }
+  }
+
+  &.disabled {
+    outline: none;
+
+    .title {
+      opacity: 0.3;
+    }
+
+    .inputs {
+      outline: 0.1rem solid rgb(214 214 214 / 30%);
+      background: rgb(255 255 255 / 30%);
+      opacity: 1;
+    }
+
+    .left {
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.dateInput[class~='ofd'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $OFD_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $OFD_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $OFD_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='ofd'] {
+  .title {
+    color: $OFD_Primary_Color;
+  }
+}
+
+.dateInput[class~='gosotchet'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $Gosotchet_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $Gosotchet_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $Gosotchet_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='gosotchet'] {
+  .title {
+    color: $Gosotchet_Primary_Color;
+  }
+}
+
+.dateInput[class~='td'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $TD_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $TD_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $TD_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='td'] {
+  .title {
+    color: $TD_Primary_Color;
+  }
+}
+
+.dateInput[class~='edo'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $EDO_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $EDO_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $EDO_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='edo'] {
+  .title {
+    color: $EDO_Primary_Color;
+  }
+}
+
+.dateInput[class~='check-index'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $CheckInd_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $CheckInd_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $CheckInd_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='check-index'] {
+  .title {
+    color: $CheckInd_Primary_Color;
+  }
+}
+
+.dateInput[class~='marking'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $Marking_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $Marking_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $Marking_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='marking'] {
+  .title {
+    color: $Marking_Primary_Color;
+  }
+}
+
+.dateInput[class~='big-data'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $BigData_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $BigData_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $BigData_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='big-data'] {
+  .title {
+    color: $BigData_Primary_Color;
+  }
+}
+
+.dateInput[class~='arenda'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $Arenda_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $Arenda_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $Arenda_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='arenda'] {
+  .title {
+    color: $Arenda_Primary_Color;
+  }
+}
+
+.dateInput[class~='mchd'] {
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    .inputs {
+      transition: 0.3s;
+      outline: 0.1rem solid $Mchd_Primary_Color;
+      box-shadow: $shadow-inset-1;
+      border-radius: 0.2rem;
+    }
+
+    .left {
+      svg {
+        path {
+          &:nth-child(1) {
+            transition: 0.3s;
+            stroke: $Mchd_Primary_Color;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            transition: 0.3s;
+            fill: $Mchd_Primary_Color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.typingStatus__typing[class~='mchd'] {
+  .title {
+    color: $Mchd_Primary_Color;
+  }
+}
+
+.typingStatus {
+  &__default {
+    .title {
+      color: $color-blue-4;
+    }
+  }
+
+  &__typing {
+    color: $color-blue-2;
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-small;
+    line-height: $line-height-small-2;
+
+    .title {
+      color: $color-blue-2;
+    }
+  }
+
+  &__cpomplete {
+    .title {
+      color: $color-grey-4;
+      font-family: $font-family-secondary;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font-size-small;
+      line-height: $line-height-small-2;
+    }
+  }
+}
+
+.inputs {
+  transition: 0.3s;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 0.1rem solid $color-grey-35;
+  border-radius: 0.2rem;
+  padding: 0.8rem 1rem 0.8rem 1.8rem;
+  background-color: $color-white-1;
+}
+
+.left {
+  display: flex;
+  margin: 0 0.9rem 0 0;
+
+  &_icon {
+    path {
+      &:nth-child(1) {
+        stroke: $color-grey-5;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        fill: $color-grey-5;
+      }
+    }
+  }
+
+  svg {
+    display: inline-block;
+    width: 1.6rem;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title {
+  font-family: $font-family-secondary;
+  font-style: normal;
+  font-weight: 600;
+  font-size: $font-size-small;
+  line-height: $line-height-small-2;
+  color: $color-blue-4;
+}
+
+.dates {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  input {
+    border: none;
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-medium-1;
+    line-height: $line-height-medium-1;
+    color: $color-blue-4;
+    width: 7.1rem;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $font-size-medium-1;
+      line-height: $line-height-medium-1;
+      color: $color-grey-5;
+    }
+  }
+}
+
+.delimiter {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-medium-1;
+  margin: 0 0.5rem;
+  color: $color-grey-5;
+
+  &__cpomplete {
+    color: $color-blue-4;
+  }
+}
+
+.right {
+  svg {
+    display: block;
+    width: 1.6rem;
+  }
+}
+
+.clear {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  transform: rotate(45deg);
+  width: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    width: 1.3rem;
+    stroke: $Middle_Grey;
+  }
+}
+
+.messages {
+  padding: 0 1.6rem;
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-small;
+  line-height: $line-height-small-2;
+
+  &_warning {
+    color: $color-warning-warning;
+  }
+
+  &_error {
+    color: $color-red-1;
+  }
+}

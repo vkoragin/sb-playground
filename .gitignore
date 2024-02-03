@@ -1,3 +1,5 @@
-/node_modules
-/dist
-/sotybook-static
+node_modules
+dist
+sotybook-static
+.vscode/*
+!.vscode/extensions.json
