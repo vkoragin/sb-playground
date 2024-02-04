@@ -1,26 +1,26 @@
 .storybook-check {
   position: relative;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   border-radius: 2px;
   background: #ffffff;
   padding: 1rem 1rem 1rem 3.6rem;
-  color: #254E5F;
+  color: #254e5f;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 14px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   align-items: center;
 }
 
 .storybook-check--disabled {
-  opacity: .3;
+  opacity: 0.3;
   cursor: context-menu;
 }
 
 .storybook-check:hover {
-  transition: .3s;
+  transition: 0.3s;
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -43,12 +43,12 @@
 }
 
 .storybook-check .storybook-check__box {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .storybook-check--checked {
-  background: #F8F8F8;
+  background: #f8f8f8;
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -59,80 +59,107 @@
 }
 
 .storybook-check__input--ofd:checked + .storybook-check__box {
-  background-color: #4BA1A5;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #81C9CC, inset 0px -1px 4px #4A7F82;
+  background-color: #4ba1a5;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #81c9cc,
+    inset 0px -1px 4px #4a7f82;
 }
 
 .storybook-check--ofd:hover {
-  border-color: #4BA1A5;
+  border-color: #4ba1a5;
 }
 
 .storybook-check__input--edo:checked + .storybook-check__box {
-  background-color: #EEAF41;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #EEAF41, inset 0px -1px 4px #EC9B0E;
+  background-color: #eeaf41;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #eeaf41,
+    inset 0px -1px 4px #ec9b0e;
 }
 
 .storybook-check--edo:hover {
-  border-color: #EEAF41;
+  border-color: #eeaf41;
 }
 
 .storybook-check__input--gosotchet:checked + .storybook-check__box {
-  background-color: #488BCA;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #488BCA, inset 0px -1px 4px #2C70AF;
+  background-color: #488bca;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #488bca,
+    inset 0px -1px 4px #2c70af;
 }
 
 .storybook-check--gosotchet:hover {
-  border-color: #488BCA;
+  border-color: #488bca;
 }
 
 .storybook-check__input--td:checked + .storybook-check__box {
-  background-color: #EA8242;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #EA8242, inset 0px -1px 4px #E26212;
+  background-color: #ea8242;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #ea8242,
+    inset 0px -1px 4px #e26212;
 }
 
 .storybook-check--td:hover {
-  border-color: #EA8242;
+  border-color: #ea8242;
 }
 
 .storybook-check__input--marking:checked + .storybook-check__box {
-  background-color: #4BB9BA;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #4BB9BA, inset 0px -1px 4px #339799;
+  background-color: #4bb9ba;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #4bb9ba,
+    inset 0px -1px 4px #339799;
 }
 
 .storybook-check--marking:hover {
-  border-color: #4BB9BA;
+  border-color: #4bb9ba;
 }
 
 .storybook-check__input--check-index:checked + .storybook-check__box {
-  background-color: #5BC0DE;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #5BC0DE, inset 0px -1px 4px #23A5CD;
+  background-color: #5bc0de;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #5bc0de,
+    inset 0px -1px 4px #23a5cd;
 }
 
 .storybook-check--check-index:hover {
-  border-color: #5BC0DE;
+  border-color: #5bc0de;
 }
 
 .storybook-check__input--big-data:checked + .storybook-check__box {
-  background-color: #5AB8C5;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #5AB8C5, inset 0px -1px 4px #36A1B0;
+  background-color: #5ab8c5;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #5ab8c5,
+    inset 0px -1px 4px #36a1b0;
 }
 
 .storybook-check--big-data:hover {
-  border-color: #5AB8C5;
+  border-color: #5ab8c5;
 }
 
 .storybook-check__input--arenda:checked + .storybook-check__box {
-  background-color: #D58576;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #D58576, inset 0px -1px 4px #CE5A46;
+  background-color: #d58576;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #d58576,
+    inset 0px -1px 4px #ce5a46;
 }
 
 .storybook-check--arenda:hover {
-  border-color: #D58576;
+  border-color: #d58576;
 }
 
 .storybook-check__input--mchd:checked + .storybook-check__box {
   background-color: #626ab7;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 4px #626ab7, inset 0px -1px 4px #434CA3;
+  box-shadow:
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 4px #626ab7,
+    inset 0px -1px 4px #434ca3;
 }
 
 .storybook-check--mchd:hover {
@@ -149,39 +176,39 @@
 }
 
 .storybook-check--error {
-  border-color: #D12E34;
+  border-color: #d12e34;
 }
 
 .storybook-check--error .storybook-check__help-block {
-  color: #D12E34;
+  color: #d12e34;
 }
 
 .storybook-check--warning {
-  border-color: #DCAE1D;
+  border-color: #dcae1d;
 }
 
 .storybook-check--warning .storybook-check__help-block {
-  color: #DCAE1D;
+  color: #dcae1d;
 }
 
 .storybook-check--focus {
-  box-shadow: 0 0 0 2px #5BC0DE;
+  box-shadow: 0 0 0 2px #5bc0de;
   border-color: transparent;
 }
 
 .storybook-check--focus:hover {
-  box-shadow: 0 0 0 2px #5BC0DE;
+  box-shadow: 0 0 0 2px #5bc0de;
   border-color: transparent;
 }
 
 .storybook-check__item-number {
   margin-left: 0.5rem;
-  color: #C7C7CC;
+  color: #c7c7cc;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
 }
 
 .storybook-check__item-number span:first-child {
-  color: #254E5F;
+  color: #254e5f;
 }
