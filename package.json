@@ -1,6 +1,6 @@
 {
-  "name": "sb-playground",
-  "version": "1.0.0",
+  "name": "@pofd-front/storybook",
+  "version": "4.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -61,6 +61,7 @@
     "react-color": "^2.19.3",
     "react-datepicker": "^6.1.0",
     "react-text-mask": "^5.5.0",
+    "rollup-plugin-copy-watch": "^0.0.1",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "save-dev": "^0.0.1-security"
