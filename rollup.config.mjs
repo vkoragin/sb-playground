@@ -6,7 +6,7 @@ import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import svg from 'rollup-plugin-svg';
-import copy from 'rollup-plugin-copy-watch';
+// import copy from 'rollup-plugin-copy-watch';
 
 export default [
   {
@@ -31,13 +31,13 @@ export default [
       }),
       peerDepsExternal(),
       svg(),
-      copy({
-        watch: 'static',
-        targets: [
-          { src: 'src/styles/*.css', dest: 'dist/public/styles/css' },
-          { src: 'src/styles/*.scss', dest: 'dist/public/styles/scss' },
-        ],
-      }),
+      // copy({
+      //   watch: 'static',
+      //   targets: [
+      //     { src: 'src/styles/*.css', dest: 'dist/public/styles/css' },
+      //     { src: 'src/styles/*.scss', dest: 'dist/public/styles/scss' },
+      //   ],
+      // }),
     ],
   },
   {
