@@ -15,7 +15,7 @@
     "prettier": "prettier --write \"**/*.+(json|yml|css|md|mdx)\"",
     "build-storybook": "storybook build"
   },
-  "author": "",
+  "author": "v.koriagin",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
